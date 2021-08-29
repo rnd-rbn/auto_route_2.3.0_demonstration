@@ -11,7 +11,7 @@ class SecondRoute extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            AutoRouter.of(context).pop();
+            context.router.pop();
           },
           child: Text('Go back!'),
         ),
