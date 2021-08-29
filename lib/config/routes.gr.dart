@@ -16,12 +16,12 @@ class Routes extends _i1.RootStackRouter {
 
   @override
   final Map<String, _i1.PageFactory> pagesMap = {
-    FirstRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+    FirstPage.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
           return _i3.FirstRoute();
         }),
-    SecondRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+    SecondPage.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
           return _i4.SecondRoute();
@@ -30,19 +30,19 @@ class Routes extends _i1.RootStackRouter {
 
   @override
   List<_i1.RouteConfig> get routes => [
-        _i1.RouteConfig(FirstRoute.name, path: '/'),
-        _i1.RouteConfig(SecondRoute.name, path: '/second-route')
+        _i1.RouteConfig(FirstPage.name, path: '/'),
+        _i1.RouteConfig(SecondPage.name, path: '/second-route')
       ];
 }
 
-class FirstRoute extends _i1.PageRouteInfo {
-  const FirstRoute() : super(name, path: '/');
+class FirstPage extends _i1.PageRouteInfo {
+  const FirstPage() : super(name, path: '/');
 
-  static const String name = 'FirstRoute';
+  static const String name = 'FirstPage';
 }
 
-class SecondRoute extends _i1.PageRouteInfo {
-  const SecondRoute() : super(name, path: '/second-route');
+class SecondPage extends _i1.PageRouteInfo {
+  const SecondPage() : super(name, path: '/second-route');
 
-  static const String name = 'SecondRoute';
+  static const String name = 'SecondPage';
 }

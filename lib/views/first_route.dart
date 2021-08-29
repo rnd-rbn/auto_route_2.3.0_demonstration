@@ -1,5 +1,6 @@
-import 'package:auto_route_2_3_0/views/second_route.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import '../config/routes.gr.dart';
 
 class FirstRoute extends StatelessWidget {
   @override
@@ -12,10 +13,7 @@ class FirstRoute extends StatelessWidget {
         child: ElevatedButton(
           child: Text('Open route'),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SecondRoute()),
-            );
+            AutoRouter.of(context).push(const SecondPage());
           },
         ),
       ),

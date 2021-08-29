@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class SecondRoute extends StatelessWidget {
@@ -10,7 +11,7 @@ class SecondRoute extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pop(context);
+            AutoRouter.of(context).pop();
           },
           child: Text('Go back!'),
         ),
