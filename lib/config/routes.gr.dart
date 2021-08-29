@@ -23,8 +23,9 @@ class Routes extends _i1.RootStackRouter {
         }),
     SecondPage.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
-        builder: (_) {
-          return _i4.SecondRoute();
+        builder: (data) {
+          final args = data.argsAs<SecondPageArgs>();
+          return _i4.SecondRoute(routeName: args.routeName);
         })
   };
 
@@ -41,8 +42,16 @@ class FirstPage extends _i1.PageRouteInfo {
   static const String name = 'FirstPage';
 }
 
-class SecondPage extends _i1.PageRouteInfo {
-  const SecondPage() : super(name, path: '/second-route');
+class SecondPage extends _i1.PageRouteInfo<SecondPageArgs> {
+  SecondPage({required String routeName})
+      : super(name,
+            path: '/second-route', args: SecondPageArgs(routeName: routeName));
 
   static const String name = 'SecondPage';
+}
+
+class SecondPageArgs {
+  const SecondPageArgs({required this.routeName});
+
+  final String routeName;
 }

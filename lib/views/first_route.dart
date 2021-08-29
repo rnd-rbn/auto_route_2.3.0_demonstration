@@ -13,7 +13,7 @@ class FirstRoute extends StatelessWidget {
         child: ElevatedButton(
           child: Text('Open route'),
           onPressed: () {
-            context.router.push(const SecondPage());
+            context.router.push(SecondPage(routeName: '2nd Route'));
           },
         ),
       ),
